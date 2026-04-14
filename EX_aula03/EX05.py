@@ -1,13 +1,10 @@
-print("Você deverá inserir 5 números")
+# Lê dois números inteiros
+a = int(input("Digite o valor de A: "))
+b = int(input("Digite o valor de B: "))
 
-# Primeiro número
-maior = float(input("Insira o primeiro número: "))
-
-# Os outros 4 números
-for i in range(4):
-    numero = float(input("Insira um número: "))
-
-    if numero > maior:
-        maior = numero
-
-print(f"O maior número digitado foi {maior}")
+# Verifica se são múltiplos
+# Se A dividido por B ou B dividido por A tiver resto 0, então são múltiplos
+if a % b == 0 or b % a == 0:
+    print("São Múltiplos")
+else:
+    print("Não são Múltiplos")

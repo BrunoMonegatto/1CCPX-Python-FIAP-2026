@@ -1,12 +1,21 @@
-n = int(input("Digite um número positivo: "))
+# Importa o ano atual
+from datetime import datetime
 
-while n <= 0:
-    print("Valor inválido! Digite um número positivo.")
-    n = int(input("Digite um número positivo: "))
+# Pega o ano atual automaticamente
+ano_atual = datetime.now().year
 
-soma = 0
+# Lê o ano de nascimento
+ano_nascimento = int(input("Digite seu ano de nascimento: "))
 
-for i in range(1, n + 1):
-    soma += i
+# Calcula a idade
+idade = ano_atual - ano_nascimento
 
-print(f"A soma de 1 até {n} é: {soma}")
+# Verifica a situação do voto
+if idade < 16:
+    print("Voto proibido")
+
+elif idade == 16 or idade == 17 or idade >= 70:
+    print("Voto opcional")
+
+else:
+    print("Voto obrigatório")

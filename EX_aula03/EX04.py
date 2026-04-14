@@ -1,9 +1,21 @@
-print("Você deverá inserir 5 números para a soma")
+# Lê as quatro notas do aluno
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
+nota3 = float(input("Digite a terceira nota: "))
+nota4 = float(input("Digite a quarta nota: "))
 
-soma = 0
+# Calcula a média
+media = (nota1 + nota2 + nota3 + nota4) / 4
 
-for i in range(5):
-    numero = float(input("Insira um número: "))
-    soma = soma + numero
+# Mostra a média
+print("Média:", media)
 
-print(f"O resultado da soma dos 5 números é {soma}")
+# Verifica a situação do aluno
+if media >= 7:
+    print("Aprovado")
+
+elif media >= 5:
+    print("Em recuperação")
+
+else:
+    print("Reprovado")
